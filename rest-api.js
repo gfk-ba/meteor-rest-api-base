@@ -51,10 +51,18 @@ RestApi = (function () {
      * @param {Object}   req  The connect request object
      * @param {Object}   res  The connect response object
      */
-    RestApi.prototype.handleError = function (err, req, res) {
+    RestApi.prototype.handleError = function (err, req, res, next) {
         this._logger.error('[rest-api] Error while handling request: ' + err.toString(), {
             error: err,
-            request: req
+            request: {
+                headers: req.headers,
+                hostname: req.hostname,
+                ip: req.ip,
+                path: req.path,
+                params: req.params,
+                query: req.query,
+                body: req.body
+            }
         });
 
         var status = err.status || 500;
