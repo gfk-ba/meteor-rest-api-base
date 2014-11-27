@@ -1,2 +1,8 @@
 .meteor/local
 .meteor/meteorite
+.build.gfk:rest-api
+.build.gfk:rest-api-base
+.build.gfk:rest-api-garbage-1shw9xe
+.build.local-test:gfk:rest-api
+.build.local-test:gfk:rest-api-base
+versions.json
