@@ -99,7 +99,7 @@ RestApi = (function () {
 
     RestApi.prototype._wrapHandler = function (fn) {
         return function (req, res, next) {
-            var result = fn(req.params, req.body);
+            var result = fn(req.params, req.body, req.query);
             res.json(result);
         };
     };
