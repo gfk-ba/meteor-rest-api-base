@@ -32,7 +32,7 @@ RestApi = (function () {
         this._router = router;
 
         this._router.use(function(req, res, next) {
-            if (!_.isFunction(authenticationHandler) || authenticationHandler(req.params, req.body, req.headers)) {
+            if (!_.isFunction(authenticationHandler) || authenticationHandler(req.params, req.body, req.headers, req.query)) {
                 next();
             } else {
                 throw 'Authentication Error';

@@ -49,7 +49,8 @@ describe('Rest-api', function () {
             body: {
                 'test': 'body'
             },
-            headers: {}
+            headers: {},
+            query: {}
         };
 
         var bodyParser = {
@@ -113,7 +114,7 @@ describe('Rest-api', function () {
                 authenticationHandler.returns(true);
                 middleWareRouter.use.args[0][0](request, response, next);
                 expect(next).to.have.been.called;
-                expect(authenticationHandler).to.have.been.calledWithExactly(request.params, request.body, request.headers);
+                expect(authenticationHandler).to.have.been.calledWithExactly(request.params, request.body, request.headers, request.query);
             });
 
             it('Should throw a authentication error if authentitcationHandler returns false', function () {
