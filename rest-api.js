@@ -3,12 +3,12 @@
 RestApi = (function () {
     /**
      * Wrapper for connect middleware
-     * 
+     *
      * @constructor
      * @param {Object}   settings              Settings to use for setting up this rest-api
      * @param {Function} authenticationHandler The authenticationHandler that will be first called on overy request
      * @param {Object}   [logger=console]      The logger to use
-     * @param {Object}   connectHandler        The connect middleware handling the connections for example express
+     * @param {Object}   connectHandler        The connect middleware handling the connections for example express gets arguments: parameters, body, header
      * @param {Object}   router                The connect middleware router plugin to handle routing
      * @param {Array|String}   parser          The parser(s) to run on incoming requests
      */
