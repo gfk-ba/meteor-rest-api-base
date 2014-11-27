@@ -1,8 +1,8 @@
 Package.describe({
     name: 'gfk:rest-api-base',
     summary: 'Base wrapper rest api for connect middleware',
-    version: '0.1.2',
-    git: 'https://github.com/gfk-ba/meteor-rest-api-express'
+    version: '0.1.3',
+    git: 'https://github.com/gfk-ba/meteor-rest-api-base'
 });
 
 Package.onUse(function(api) {
