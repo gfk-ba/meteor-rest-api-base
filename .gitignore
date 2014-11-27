@@ -6,3 +6,4 @@
 .build.local-test:gfk:rest-api
 .build.local-test:gfk:rest-api-base
 versions.json
+.build*
